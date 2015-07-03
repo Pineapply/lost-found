@@ -11,7 +11,7 @@ function getlocation() {
     }
 )}
 
-$(document).on("page:load, ready", function() {
+$(document).on("ready page:load", function() {
   $(".get-location, .search-location button").click(function(){
     getlocation();
   });

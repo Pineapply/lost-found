@@ -1,25 +1,36 @@
-<p id="notice"><%= notice %></p>
+<main class="jumbotron">
+  <h1>Which tram?</h1>
+</main>
 
-<h1>Listing Stops</h1>
+<div>
+  <p>Tell us where you got off & we'll see if anyone has found your item</p>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="transport">
+ <% @tram_stops.each do |stop| %>
+    <div class="tram-stop">
+      <h4><%= Stop.stop_name(stop) %></h4>
+      <% if Rails.env == "development" %>
+        <h3 style="color:blue"><%= stop['result']['transport_type'] %>
+        <h3 style="color:red"><%= stop['result']['stop_id'] %>
+      <% end %>
+      <% Stop.uniq_tram_lines(stop).each do |line| %>
+        <%= button_tag Stop.info(line), class: 'btn btn-large btn-default' %>
+      <% end %>
+    </div>
+  <% end %>
+  <small>Can't find your tram? Try expanding or refining your search</small>
+  <div class="refine-location input-group">
+    <input type="text" class="form-control" placeholder="Enter location">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">Search</button>
+    </span>
+  </div>
+</div>
 
-  <tbody>
-    <% @stops.each do |stop| %>
-      <tr>
-        <td><%= link_to 'Show', stop %></td>
-        <td><%= link_to 'Edit', edit_stop_path(stop) %></td>
-        <td><%= link_to 'Destroy', stop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<hr>
 
-<br>
-
-<%= link_to 'New Stop', new_stop_path %>
+<footer>
+  <a href="/about.html">About Us</a> |
+  <a href="/report.html">Submit a Lost Property Report</a>
+</footer>

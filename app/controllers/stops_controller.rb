@@ -1,10 +1,11 @@
 class StopsController < ApplicationController
   before_action :set_stop, only: [:show, :edit, :update, :destroy]
 
+
   # GET /stops
   # GET /stops.json
   def index
-    @stops = Stop.all
+    @tram_stops = Stop.tram_stops(params[:lat], params[:lng])
   end
 
   # GET /stops/1
