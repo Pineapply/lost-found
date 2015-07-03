@@ -111,9 +111,10 @@ a, a:hover, a:focus {
   }
   .location-search {
     font-size: 1.25em;
-    padding: 2em 1.5em 4em;
+    padding: 2em 1.5em 8em;
     margin-top: -1.75em;
-    background: #EAF6F5;
+    background: #EAF6F5 asset_url("lost-decor.png") bottom right no-repeat;
+    background-size: contain;
   }
   .form-control {
     border: 3px solid #D4EDF3;
