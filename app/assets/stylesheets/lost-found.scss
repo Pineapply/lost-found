@@ -2,6 +2,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
 /* Bootstrap reset */
 textarea, input, a, button, :focus { outline: none; }
 a, a:visited, a:hover {text-decoration: none;}
@@ -9,7 +12,19 @@ a, a:visited, a:hover {text-decoration: none;}
 body {
   background: #d4d4d4 url("http://subtlepatterns.com//patterns/geometry.png");
   text-align: center;
-  font-family: sans-serif;
+  color: #11143F;
+}
+
+html, body {
+  font-family: 'Cabin', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+a, a:hover, a:focus {
+  color: #11143F;
 }
 
 .welcome {
@@ -34,6 +49,45 @@ body {
   to {
     -webkit-transform: scale(1);
   }
+}
+
+.visitors .jumbotron {
+  background: #eaf6f6 asset_url("banner.png") no-repeat center top;
+  background-size: contain;
+  height: 25em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1em;
+
+  img, small {
+    align-self: center;
+    color: #98A0A7;
+  }
+}
+
+.btn-lost, .btn-found,
+.btn-lost:hover, .btn-found:hover {
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 2em;
+  width: 75%;
+}
+
+.btn-lost {
+  background-color: #A61E27;
+}
+
+.btn-found {
+  background-color: #F3C84B;
+}
+
+.lost .jumbotron {
+  background-color: #A61E27;
+  color: #FFF;
 }
 
 .tram-stop button {

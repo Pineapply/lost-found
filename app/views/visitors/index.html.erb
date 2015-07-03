@@ -1,13 +1,13 @@
 <main class="jumbotron">
-  <h1>L O S T</h1>
   <small>Crowdsource lost & found on PTV (beta)</small>
+  <img src="<%= asset_path "logo-650x150.png" %>" alt="LOST+FOUND" width="240"/>
 </main>
 
 <p>
-  <%= link_to "Lost an item?", lost_path, class: "btn btn-large btn-default" %>
+  <%= link_to "Lost an item?", lost_path, class: "btn btn-large btn-lost" %>
 </p>
 <p>
-  <a class="btn btn-large btn-default" href="/found.html">Found an item?</a>
+  <a class="btn btn-large btn-found" href="/found.html">Found an item?</a>
 </p>
 <hr>
 
