@@ -1,0 +1,88 @@
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Bootstrap reset */
+textarea, input, a, button, :focus { outline: none; }
+a, a:visited, a:hover {text-decoration: none;}
+
+body {
+  background: #d4d4d4 url("http://subtlepatterns.com//patterns/geometry.png");
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s;
+}
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+.tram-stop button {
+  clear:both;
+  display: block;
+  margin: 0.75em auto;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.search-location {
+  margin: 1em;
+}
+
+.refine-location {
+  margin: 0.5em 1em 1em;
+}
+
+.tram-stop {
+  padding: 1em;
+  margin: 1em;
+  border: 5px solid #eee;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.75);
+}
+
+.tram-stop button:hover {
+  background-color: #FFF;
+}
+
+.last-five-trams {
+  margin-top: -0.95em;
+  background-color: #eee;
+  padding: 2em 1em 0.5em;
+  border-top: 1px solid #ccc;
+}
+
+.last-five-trams li {
+  position: relative;
+  display: inline-block;
+  padding: 0.75em;
+  margin: 0.25em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.last-five-trams li.earlier {
+  background-color: transparent;
+  border: transparent;
+  color: #aaa;
+}

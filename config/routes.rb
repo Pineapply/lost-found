@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :stops
-  get 'lost/index'
-
   root to: 'visitors#index'
+  get 'lost', :to => 'lost#index'
 end
