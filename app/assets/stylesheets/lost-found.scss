@@ -10,7 +10,7 @@ textarea, input, a, button, :focus { outline: none; }
 a, a:visited, a:hover {text-decoration: none;}
 
 body {
-  background: #d4d4d4 url("http://subtlepatterns.com//patterns/geometry.png");
+  background: #fff;
   text-align: center;
   color: #11143F;
 }
@@ -51,15 +51,19 @@ a, a:hover, a:focus {
   }
 }
 
-.visitors .jumbotron {
-  background: #eaf6f6 asset_url("banner.png") no-repeat center top;
-  background-size: contain;
-  height: 25em;
-
+.jumbotron {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+
+/* ↓↓↓↓↓↓↓↓↓↓   HOME   ↓↓↓↓↓↓↓↓↓↓ */
+
+.visitors .jumbotron {
+  background: #eaf6f6 asset_url("banner.png") no-repeat center top;
+  background-size: contain;
+  height: 25em;
   padding-bottom: 1em;
 
   img, small {
@@ -83,12 +87,55 @@ a, a:hover, a:focus {
 
 .btn-found {
   background-color: #F3C84B;
+  color: #11143F;
 }
 
-.lost .jumbotron {
-  background-color: #A61E27;
-  color: #FFF;
+/* ↑↑↑↑↑↑↑↑↑↑   HOME   ↑↑↑↑↑↑↑↑↑↑ */
+
+
+
+/* ↓↓↓↓↓↓↓↓↓↓   LOST   ↓↓↓↓↓↓↓↓↓↓ */
+
+.lost {
+  .jumbotron {
+    background: #A61E27 asset_url("tram-translucent-icon.png") no-repeat -15% top;
+    background-size: contain;
+    color: #FFF;
+    height: 15em;
+    align-items: flex-end;
+    padding: 2em;
+
+    p {
+      font-size: 26px;
+    }
+  }
+  .location-search {
+    font-size: 1.25em;
+    padding: 2em 1.5em 4em;
+    margin-top: -1.75em;
+    background: #EAF6F5;
+  }
+  .form-control {
+    border: 3px solid #D4EDF3;
+  }
+  .get-location button {
+    background-color: #F3C84B;
+    color: #11143F;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  .search-location input {
+    border: 3px solid #D4EDF3;
+  }
+  .search-location button {
+    border: 3px solid #D4EDF3;
+    padding: 4px 14px;
+    background-color: #D4EDF3;
+  }
 }
+
+/* ↑↑↑↑↑↑↑↑↑↑   LOST   ↑↑↑↑↑↑↑↑↑↑ */
+
 
 .tram-stop button {
   clear:both;
