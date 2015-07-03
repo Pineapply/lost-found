@@ -138,6 +138,22 @@ a, a:hover, a:focus {
 /* ↑↑↑↑↑↑↑↑↑↑   LOST   ↑↑↑↑↑↑↑↑↑↑ */
 
 
+
+/* ↓↓↓↓↓↓↓↓↓↓   FOUND   ↓↓↓↓↓↓↓↓↓↓ */
+
+.found {
+  .jumbotron {
+    background: #F3C84B asset_url("tram-translucent-icon.png") no-repeat right top;
+    background-size: contain;
+    color: #FFF;
+    height: 15em;
+    align-items: flex-start;
+    padding: 2em;
+  }
+}
+/* ↑↑↑↑↑↑↑↑↑↑   FOUND   ↑↑↑↑↑↑↑↑↑↑ */
+
+
 .tram-stop button {
   clear:both;
   display: block;
