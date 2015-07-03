@@ -4,8 +4,7 @@
 function getlocation() {
 	navigator.geolocation.getCurrentPosition(
 		function(p) {
-			alert(p.coords.latitude);
-
+			window.location.href = "/stops?lat="+ p.coords.latitude + "&lng=" +  p.coords.longitude;
 		},
 		function () {
 			alert('Error locating your location :(');
