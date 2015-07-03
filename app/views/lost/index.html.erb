@@ -1,2 +1,44 @@
-<h1>Lost#index</h1>
-<p>Find me in app/views/lost/index.html.erb</p>
+<main class="jumbotron">
+ <h1>Which tram?</h1>
+</main>
+
+<div>
+  <p>Tell us where you got off & we'll see if anyone has found your item</p>
+  <p class="get-location">
+  	<button class="btn btn-large btn-default"><i class="glyphicon glyphicon-map-marker"></i>  Use my location</button>
+	</p>
+ <div class="search-location input-group">
+    <input type="text" class="form-control" placeholder="Enter location">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">Search</button>
+    </span>
+  </div><!-- /input-group -->
+</div>
+
+<div class="transport hidden">
+	<div class="tram-stop">
+		<h4>Corner of Swanston St/Collins St</h4>
+		<button class="btn btn-large btn-default">Tram 109 to Box Hill</button>
+		<button class="btn btn-large btn-default">Tram 109 to Port Melbourne</button>
+		<button class="btn btn-large btn-default">Tram 48 to Preston</button>
+		<button class="btn btn-large btn-default">Tram 48 to North Balwyn</button>
+	</div>
+	<div class="tram-stop">
+		<h4>Corner of Swanston St/Bourke St</h4>
+		<button class="btn btn-large btn-default">Tram 90 to The Suburbs</button>
+		<button class="btn btn-large btn-default">Tram 90 to Another Suburb</button>
+	</div>
+	<small>Can't find your tram? Try expanding or refining your search</small>
+	<div class="refine-location input-group">
+    <input type="text" class="form-control" placeholder="Enter location">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">Search</button>
+    </span>
+  </div><!-- /input-group -->
+</div>
+    <hr>
+
+<footer>
+	<a href="/about.html">About Us</a> |
+	<a href="/report.html">Submit a Lost Property Report</a>
+</footer>
