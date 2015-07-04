@@ -61,13 +61,22 @@ a, a:hover, a:focus {
   }
 }
 
+a.back-home {
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .jumbotron {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
-
 
 .visitors .jumbotron {
   background: #eaf6f6 asset_url("banner.png") no-repeat center top;
@@ -78,6 +87,13 @@ a, a:hover, a:focus {
   img, small {
     align-self: center;
     color: #98A0A7;
+  }
+}
+
+@media (min-width: 420px) {
+  .visitors .jumbotron {
+    background: #eaf6f6 asset_url("banner-subtle.png") no-repeat center top;
+    background-size: cover;
   }
 }
 
@@ -213,4 +229,8 @@ body.loading:before {
   background-color: transparent;
   border: transparent;
   color: #aaa;
+}
+
+footer {
+  padding: 2em;
 }
