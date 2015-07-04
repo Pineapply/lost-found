@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @line.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @line.description %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @line.destination %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @line.time %>
+</p>
+
+<%= link_to 'Edit', edit_line_path(@line) %> |
+<%= link_to 'Back', lines_path %>
