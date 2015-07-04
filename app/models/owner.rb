@@ -1,0 +1,2 @@
+class Owner < User
+end

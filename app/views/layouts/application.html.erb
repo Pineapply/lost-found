@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Lost Found" %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Lost Found" %>">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <link rel="apple-touch-icon" href="<%= asset_path "apple-touch-icon.png" %>">
     <link rel="apple-touch-startup-image" href="<%= asset_path "startup.png" %>">
 
@@ -45,18 +48,20 @@
                  and (-webkit-device-pixel-ratio: 1)"
           rel="apple-touch-startup-image">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
+
   <body class="<%= controller.controller_name %>">
     <main role="main">
        <%= yield %>
     </main>
+
     <footer>
       <a href="/about.html">About Us</a> |
-      <%= link_to "Submit a Lost Property Report", new_item_path  %>
+      <%= link_to "Submit a Lost Property Report", new_owner_path  %>
     </footer>
 
   </body>
