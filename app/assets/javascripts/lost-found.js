@@ -32,7 +32,10 @@ function show_loading_screen(){
 // DO NOT do this in real project
 $(document).on("ready page:load", function() {
   $(".get-location, .search-location button").click(function(){
+<<<<<<< Updated upstream
     show_loading_screen();
+=======
+>>>>>>> Stashed changes
     if ($(this).data("type") == "found") {
       alert('redirect');
     }
