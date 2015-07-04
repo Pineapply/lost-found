@@ -1,7 +1,6 @@
 class StopsController < ApplicationController
   before_action :set_stop, only: [:show, :edit, :update, :destroy]
 
-
   # GET /stops
   # GET /stops.json
   def index

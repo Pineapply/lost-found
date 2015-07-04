@@ -1,5 +1,6 @@
 class Stop < ActiveRecord::Base
 
+  # TODO: Change this to Active model. We don't store stop data in the database
   TRAM = 1
   ALL = 0
   PAGINATE = 3

@@ -15,7 +15,7 @@
         <h3 style="color:red"><%= stop['result']['stop_id'] %>
       <% end %>
       <% Stop.uniq_tram_lines(stop).each do |line| %>
-        <%= button_tag Stop.info(line), class: 'btn btn-large btn-default' %>
+        <%= button_tag Stop.info(line), class: 'btn btn-large btn-default', tramline: '1' %>
       <% end %>
     </div>
   <% end %>
