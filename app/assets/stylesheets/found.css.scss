@@ -58,7 +58,6 @@ a, a:hover, a:focus {
   justify-content: flex-end;
 }
 
-/* ↓↓↓↓↓↓↓↓↓↓   HOME   ↓↓↓↓↓↓↓↓↓↓ */
 
 .visitors .jumbotron {
   background: #eaf6f6 asset_url("banner.png") no-repeat center top;
@@ -90,11 +89,6 @@ a, a:hover, a:focus {
   color: #11143F;
 }
 
-/* ↑↑↑↑↑↑↑↑↑↑   HOME   ↑↑↑↑↑↑↑↑↑↑ */
-
-
-
-/* ↓↓↓↓↓↓↓↓↓↓   LOST   ↓↓↓↓↓↓↓↓↓↓ */
 
 .lost {
   .jumbotron {
@@ -135,11 +129,9 @@ a, a:hover, a:focus {
   }
 }
 
-/* ↑↑↑↑↑↑↑↑↑↑   LOST   ↑↑↑↑↑↑↑↑↑↑ */
 
 
 
-/* ↓↓↓↓↓↓↓↓↓↓   FOUND   ↓↓↓↓↓↓↓↓↓↓ */
 
 .found {
   .jumbotron {
@@ -151,7 +143,6 @@ a, a:hover, a:focus {
     padding: 2em;
   }
 }
-/* ↑↑↑↑↑↑↑↑↑↑   FOUND   ↑↑↑↑↑↑↑↑↑↑ */
 
 
 .tram-stop button {
