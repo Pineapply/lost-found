@@ -328,6 +328,11 @@ body.loading:before {
     padding: 1em 1em 1.5em;
     margin: 3em 1em 1em;
   }
+  .btn-found, .btn-found:hover {
+    width: 100%;
+    padding: 0.75em;
+    color: #11143F;
+  }
 }
 
 /* RED - PURPLE JUMBOTRON GRADIENT BANNER */

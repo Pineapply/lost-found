@@ -9,6 +9,11 @@
     <h4><%= item.name %></h4>
     <p><%= item.description %></p>
     <img src="http://placehold.it/100x100" alt="Photo" />
+    <button class="btn btn-large btn-found update-the-owner">Update the owner</button>
+    <div class="update-owner-message">
+    	<textarea class="form-control" rows="3" placeholder="When and where the item was handed in?" ></textarea>
+    	<button class="btn btn-large btn-found pull-right submit" width="100">Submit</button>
+    </div>
   </div>
 <% end %>
 </div>
@@ -17,3 +22,40 @@
 	<p>If you cannot find a matching item,<br/>please add a description of your finding</p>
 	<%= link_to "ADD A NEW ITEM", new_reporter_path, class: "btn btn-lost" %>
 </div>
+
+
+<style>
+.update-owner-message {
+  padding: 1em;
+  background-color: rgba(242,200,75,0.5);
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+ }
+
+.update-owner-message.shown {
+  height: 150px;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.update-owner-message .submit {
+	width: 100px !important;
+	margin-top: 0.5em;
+ }
+</style>
+
+<script>
+
+$(".update-the-owner").click(function() {
+	$(this).next().addClass("shown");
+});
+
+$(".submit").click(function() {
+	$(this).parent().prev().removeClass("update-the-owner").addClass("disabled");
+	$(this).parent().prev().text("Item status updated ✓");
+	$(this).parent().removeClass("shown");
+});
+
+</script>
