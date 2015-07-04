@@ -1,5 +1,18 @@
 <!--TODO: Add padding  -->
-<%= render 'reporter_reporting_info' %>
 <div class="bg-success">
-  <p>Your report has been submitted. Good Luck!</p>
+  <a href="/" class="back-home"><i class="glyphicon glyphicon-chevron-left"></i> BACK TO HOME </a>
+  <p>Your report has been submitted. Thank you!</p>
 </div>
+
+<div class="logo-container">
+  <small>Crowdsource lost & found on PTV (beta)</small>
+  <img src="<%= asset_path "logo-650x150.png" %>" alt="LOST+FOUND" width="240"/>
+</div>
+
+
+<p>
+  <%= link_to "Lost an item?", lost_path, class: "btn btn-large btn-lost" %>
+</p>
+<p>
+  <%= link_to "Found an item?", found_path, class: "btn btn-large btn-found" %>
+</p>

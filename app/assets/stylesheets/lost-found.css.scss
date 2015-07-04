@@ -23,7 +23,7 @@ body {
   background: #fff;
   text-align: center;
   color: #11143F;
-  margin-bottom: 5em;
+  margin-bottom: 10em;
 }
 
 html, body {
@@ -36,6 +36,16 @@ h1, h2, h3 {
 
 a, a:hover, a:focus {
   color: #11143F;
+}
+
+.bg-success {
+  padding: 4em 2em 2em;
+
+  a.back-home {color: #99A1A7;}
+}
+
+.logo-container {
+  padding: 3em;
 }
 
 .welcome {

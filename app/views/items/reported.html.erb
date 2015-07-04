@@ -8,12 +8,12 @@
   <div class="item">
     <h4><%= item.name %></h4>
     <p><%= item.description %></p>
-    <img src="http://placehold.it/100x100" alt="Photo" />
+    <img src="http://lorempixel.com/100/100/technics/" alt="Photo" />
   </div>
 <% end %>
 </div>
 
 <div class="add-lost-item">
 	<p>Can't find your item?<br/>Give us a description of your item</p>
-	<button class="btn btn-lost">ADD A LOST ITEM</button>
+	<%= link_to "ADD A LOST ITEM", new_owner_path, :class => "btn btn-lost" %>
 </div>
