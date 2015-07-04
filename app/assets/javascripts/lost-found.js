@@ -24,8 +24,12 @@ function is_ptv_open(){
   }
 }
 
+function show_loading_screen(){
+  $("body").addClass("loading");
+}
+
 // TODO: modularized tangled JS below
-// DO NOT do this in real projec
+// DO NOT do this in real project
 $(document).on("ready page:load", function() {
   $(".get-location, .search-location button").click(function(){
     getlocation();
