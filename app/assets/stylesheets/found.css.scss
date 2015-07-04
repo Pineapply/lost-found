@@ -2,6 +2,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
 /* Bootstrap reset */
 textarea, input, a, button, :focus { outline: none; }
 a, a:visited, a:hover {text-decoration: none;}
@@ -24,6 +27,171 @@ a, a:hover, a:focus {
   color: #11143F;
 }
 
-body {
-  background-color: red !important;
+.welcome {
+  -webkit-animation-name: welcome;
+  -webkit-animation-duration: .9s;
+}
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.visitors .jumbotron {
+  background: #eaf6f6 asset_url("banner.png") no-repeat center top;
+  background-size: contain;
+  height: 25em;
+  padding-bottom: 1em;
+
+  img, small {
+    align-self: center;
+    color: #98A0A7;
+  }
+}
+
+.btn-lost, .btn-found,
+.btn-lost:hover, .btn-found:hover {
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 2em;
+  width: 75%;
+}
+
+.btn-lost {
+  background-color: #A61E27;
+}
+
+.btn-found {
+  background-color: #F3C84B;
+  color: #11143F;
+}
+
+
+.lost {
+  .jumbotron {
+    background: #A61E27 asset_url("tram-translucent-icon.png") no-repeat -15% top;
+    background-size: contain;
+    color: #FFF;
+    height: 15em;
+    align-items: flex-end;
+    padding: 2em;
+
+    p {
+      font-size: 26px;
+    }
+  }
+  .location-search {
+    font-size: 1.25em;
+    padding: 2em 1.5em 8em;
+    margin-top: -1.75em;
+    background: #EAF6F5 asset_url("lost-decor.png") bottom right no-repeat;
+    background-size: contain;
+  }
+  .form-control {
+    border: 3px solid #D4EDF3;
+  }
+  .get-location button {
+    background-color: #F3C84B;
+    color: #11143F;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  .search-location input {
+    border: 3px solid #D4EDF3;
+  }
+  .search-location button {
+    border: 3px solid #D4EDF3;
+    padding: 4px 14px;
+    background-color: #D4EDF3;
+  }
+}
+
+
+
+
+
+.found {
+  .jumbotron {
+    background: #F3C84B asset_url("tram-translucent-icon.png") no-repeat right top;
+    background-size: contain;
+    color: #FFF;
+    height: 15em;
+    align-items: flex-start;
+    padding: 2em;
+  }
+}
+
+
+.tram-stop button {
+  clear:both;
+  display: block;
+  margin: 0.75em auto;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.search-location {
+  margin: 1em;
+}
+
+.refine-location {
+  margin: 0.5em 1em 1em;
+}
+
+.tram-stop {
+  padding: 1em;
+  margin: 1em;
+  border: 5px solid #eee;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.75);
+}
+
+.tram-stop button:hover {
+  background-color: #FFF;
+}
+
+.last-five-trams {
+  margin-top: -0.95em;
+  background-color: #eee;
+  padding: 2em 1em 0.5em;
+  border-top: 1px solid #ccc;
+}
+
+.last-five-trams li {
+  position: relative;
+  display: inline-block;
+  padding: 0.75em;
+  margin: 0.25em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.last-five-trams li.earlier {
+  background-color: transparent;
+  border: transparent;
+  color: #aaa;
 }
