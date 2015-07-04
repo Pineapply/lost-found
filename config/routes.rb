@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :stops
 
   get 'lost', to: 'lost#index'
+  get 'found', to: 'found#index'
 end
