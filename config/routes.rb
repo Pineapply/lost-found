@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   resources :reporters, controller: 'users', type: 'Reporter'
   resources :missings, controller: 'items', type: 'Missing'
   resources :reporteds, controller: 'items', type: 'Reported'
-  resources :missing, controller: 'items', type: 'Missing'
-  resources :reported, controller: 'items', type: 'Reported'
   resources :stops
 
   get 'lost', to: 'lost#index'
