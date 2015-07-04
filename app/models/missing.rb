@@ -1,0 +1,2 @@
+class Missing < Item
+end

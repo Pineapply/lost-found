@@ -1,10 +1,12 @@
 class ItemsController < ApplicationController
+  before_action :set_type
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = type_class.all
+    render type_class.to_s.downcase.to_sym
   end
 
   # GET /items/1
@@ -62,13 +64,25 @@ class ItemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_item
-      @item = Item.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def item_params
-      params.require(:item).permit(:name, :description, :status)
-    end
+  def set_type
+    @type = type
+  end
+
+  def type
+    Item.types.include?(params[:type]) ? params[:type] : 'Item'
+  end
+
+  def type_class
+    type.constantize
+  end
+
+  def set_item
+    @item = type_class.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def item_params
+    params.require(:item).permit(:name, :description, :status)
+  end
 end

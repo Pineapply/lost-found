@@ -1,7 +1,7 @@
 <main class="jumbotron">
   <a href="/" class="back-home"><i class="glyphicon glyphicon-chevron-left"></i> BACK </a>
   <p>Where did you find it?</p>
-  <p class="get-location">
+  <p class="get-location" data-type="found">
   	<button class="btn btn-large"><i class="glyphicon glyphicon-map-marker"></i>  USE MY LOCATION</button>
 	</p>
 </main>
@@ -15,9 +15,3 @@
   </div><!-- /input-group -->
    <small>For best result, enter the street name where the tram stop is</small>
 </div>
-
-<script>
-  $(".get-location button, .search-location button").click(function() {
-    show_loading_screen();
-  });
-</script>

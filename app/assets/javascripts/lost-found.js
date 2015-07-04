@@ -32,7 +32,13 @@ function show_loading_screen(){
 // DO NOT do this in real project
 $(document).on("ready page:load", function() {
   $(".get-location, .search-location button").click(function(){
-    getlocation();
+    show_loading_screen();
+    if ($(this).data("type") == "found") {
+      alert('redirect');
+    }
+    else {
+      getlocation();
+    }
   });
 
   $(".tram-line").click(function() {
