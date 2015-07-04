@@ -1,9 +1,11 @@
-<main class="jumbotron">
+<div class="jumbotron">
+  <a href="/" class="back-home"><i class="glyphicon glyphicon-chevron-left"></i> BACK </a>
   <h1>Which tram?</h1>
-</main>
+</div>
 
 <div>
-  <p>Tell us where you got off & we'll see if anyone has found your item</p>
+  <p>Tell us where you got off<br/>
+  someone might have found your item</p>
 </div>
 
 <div class="transport">
@@ -11,23 +13,24 @@
     <div class="tram-stop">
       <h4><%= Stop.stop_name(stop) %></h4>
       <% if Rails.env == "development" %>
-        <h3 style="color:blue"><%= stop['result']['transport_type'] %></h3>
-        <h3 style="color:red"><%= stop['result']['stop_id'] %></h3>
+<!--         <h3 style="color:blue"><%= stop['result']['transport_type'] %></h3>
+        <h3 style="color:red"><%= stop['result']['stop_id'] %></h3> -->
       <% end %>
       <% Stop.uniq_tram_lines(stop).each do |line| %>
-        <%= button_tag Stop.info(line), class: 'tram-line btn btn-large btn-default' %>
+        <%= button_tag "Tram " + Stop.info(line), class: 'tram-line btn btn-large' %>
         <div class="last-five-trams">
-          <p>What time did you get off?</p>
+          <p><b>How long ago did you get off?</b></p>
           <ul class="list-group">
-            <li>10 minutes ago</li>
-            <li>30 minutes ago</li>
-            <li>1 hour ago</li>
-            <li class="earlier"><a>Earlier tram...</a></li>
+            <li>10 minutes</li>
+            <li>30 minutes</li>
+            <li>1 hour</li>
+            <li class="earlier"><a href="/owners/new">I got off earlier...</a></li>
           </ul>
           </div>
       <% end %>
     </div>
   <% end %>
+  <br>
   <small>Can't find your tram? Try expanding or refining your search</small>
   <div class="refine-location input-group">
     <input type="text" class="form-control" placeholder="Enter location">

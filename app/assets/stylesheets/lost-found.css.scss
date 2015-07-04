@@ -23,6 +23,7 @@ body {
   background: #fff;
   text-align: center;
   color: #11143F;
+  margin-bottom: 5em;
 }
 
 html, body {
@@ -181,6 +182,12 @@ body.loading:before {
   background: #EAF6F5 asset_url("lost-decor.png") bottom right no-repeat;
   background-size: contain;
 }
+@media (min-width: 420px) {
+  .location-search {
+      background-size: 40%;
+      background-position: bottom left;
+  }
+}
 .search-location input {
   border: 3px solid #D4EDF3;
 }
@@ -189,22 +196,22 @@ body.loading:before {
   padding: 4px 14px;
   background-color: #D4EDF3;
 }
-@media (min-width: 420px) {
-  .location-search {
-      background-size: 40%;
-      background-position: bottom left;
-  }
-}
 
 /* Select tram*/
-.tram-stop button {
-  clear:both;
-  display: block;
-  margin: 0.75em auto;
-  padding: 0.5em;
-  width: 100%;
+.stops {
+  .jumbotron {
+    color: #FFF;
+    background-color: #030C40;
+  }
+  .refine-location input {
+    border: 3px solid #D4EDF3;
+  }
+  .refine-location button {
+    border: 3px solid #D4EDF3;
+    padding: 4px 14px;
+    background-color: #D4EDF3;
+  }
 }
-
 .search-location {
   margin: 1em;
 }
@@ -214,22 +221,33 @@ body.loading:before {
 }
 
 .tram-stop {
-  padding: 1em;
+  padding: 1em 1.5em;
   margin: 1em;
-  border: 5px solid #eee;
+  border: 5px solid #D4EDF3;
   border-radius: 3px;
-  background: rgba(255,255,255,0.75);
+  background: #EAF5F5;
+}
+
+.tram-stop button {
+  clear:both;
+  display: block;
+  margin: 0.75em auto;
+  padding: 0.5em;
+  width: 100%;
+  border: 1px solid #B3E1E8;
+  background-color: #D4EDF3;
 }
 
 .tram-stop button:hover {
-  background-color: #FFF;
 }
 
 .last-five-trams {
   margin-top: -0.95em;
-  background-color: #eee;
-  padding: 2em 1em 0.5em;
-  border-top: 1px solid #ccc;
+  background-color: #FFF;
+  padding: 1em 0.5em 0.5em;
+  border-top: 1px solid #B3E1E8;
+  margin-bottom: 2em;
+  display: none;
 }
 
 .last-five-trams li {
@@ -245,7 +263,11 @@ body.loading:before {
 .last-five-trams li.earlier {
   background-color: transparent;
   border: transparent;
-  color: #aaa;
+  padding: 0 2em;
+
+  a {
+    color: #99A1A7;
+  }
 }
 
 footer {
