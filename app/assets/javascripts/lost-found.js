@@ -48,7 +48,11 @@ $(document).on('click',".get-location, .search-location button",function(){
 
 
 $(document).on('click', '.tram-line', function() {
-  $(this).next().toggle();
+    if ($(this).next().css('display') == 'none') {
+      $('.last-five-trams').hide();
+    } else {
+      $('.last-five-trams').show();
+    }
 });
 
 // $(".tram-line").click(function() {
