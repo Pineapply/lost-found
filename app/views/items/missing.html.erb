@@ -1,6 +1,10 @@
 <h1>missing</h1>
 
 <% @items.each do |item| %>
-  <h4><%= item.name %></h4>
-  <h4><%= item.description %></h4>
+  <div>
+    <h4><%= item.name %></h4>
+    <h4><%= item.description %></h4>
+  </div>
 <% end %>
+
+<%= link_to "None of these", new_reporter_path, class: "btn btn-primary" %>

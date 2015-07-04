@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def new
     @user = type_class.new
     @user.missing_items.build
+    render "new_#{type_class.to_s.downcase}".to_sym
   end
 
   def create
