@@ -293,6 +293,33 @@ body.loading:before {
   }
 }
 
+.items {
+  .item {
+    padding: 1em 1.5em;
+    margin: 1em;
+    border-radius: 3px;
+    background: #EAF5F5;
+    text-align: left;
+    position: relative;
+    min-height: 100px;
+    h4, p {
+      padding-right: 120px;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  .add-lost-item {
+    color: #A61E27;
+    border: #A61E27 solid 1px;
+    border-radius: 8px;
+    padding: 1em 1em 1.5em;
+    margin: 3em 1em 1em;
+  }
+}
+
 /* RED - PURPLE JUMBOTRON GRADIENT BANNER */
 .stops .jumbotron, .users .jumbotron, .items .jumbotron {
     color: #FFF;

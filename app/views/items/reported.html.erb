@@ -3,11 +3,17 @@
   <h1>Recently Found</h1>
 </div>
 
+<div class="item-list">
 <% @items.each do |item| %>
-  <div>
+  <div class="item">
     <h4><%= item.name %></h4>
-    <h4><%= item.description %></h4>
+    <p><%= item.description %></p>
+    <img src="http://placehold.it/100x100" alt="Photo" />
   </div>
 <% end %>
+</div>
 
-Can't find your item?
+<div class="add-lost-item">
+	<p>Can't find your item?<br/>Give us a description of your item</p>
+	<button class="btn btn-lost">ADD A LOST ITEM</button>
+</div>
