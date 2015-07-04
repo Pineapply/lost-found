@@ -35,8 +35,15 @@
                  and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- iPhone < 5 non-retina startup image -->
+    <link href="https://placehold.it/320x460"
+          media="(device-width: 320px) and (device-height: 480px)
+                 and (-webkit-device-pixel-ratio: 1)"
+          rel="apple-touch-startup-image">
+
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application'  %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -51,7 +58,7 @@
         <%= link_to "Submit a Lost Property Report", new_owner_path  %>
       </p>
       <p>
-        <i class="glyphicon glyphicon-map-marker"></i> Find nearest: 
+        <i class="glyphicon glyphicon-map-marker"></i> Find nearest:
           <span style="white-space: nowrap">
             <a href="https://www.google.com.au/maps/search/police+stations+near+Melbourne,+Victoria/@-37.811273,144.9723277,14z" class="btn btn-xs btn-default"> Victoria Police Station</a>&nbsp;<a href="https://www.google.com.au/maps/search/train+stations+near+Melbourne,+Victoria/@-37.8162568,144.9637875,15z" class="btn btn-xs btn-default">Train Station
           </a>
