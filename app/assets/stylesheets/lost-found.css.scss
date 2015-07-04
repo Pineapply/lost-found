@@ -231,9 +231,11 @@ body.loading:before {
 .tram-stop {
   padding: 1em 1.5em;
   margin: 1em;
-  border: 5px solid #D4EDF3;
   border-radius: 3px;
   background: #EAF5F5;
+
+  h4 {text-align: left;}
+
 }
 
 .tram-stop button {
@@ -242,8 +244,7 @@ body.loading:before {
   margin: 0.75em auto;
   padding: 0.5em;
   width: 100%;
-  border: 1px solid #B3E1E8;
-  background-color: #D4EDF3;
+  background-color: #B3E1E8;
 }
 
 .tram-stop button:hover {
