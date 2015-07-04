@@ -6,6 +6,7 @@ class Stop < ActiveRecord::Base
   PAGINATE = 3
 
   def self.api
+    # TODO: Move api key to ENV specific file
     PtvTimetable::API.new('1000491', '6958c2fa-05c9-11e5-9cc2-02f9e320053a')
   end
 

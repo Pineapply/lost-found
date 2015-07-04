@@ -11,11 +11,20 @@
     <div class="tram-stop">
       <h4><%= Stop.stop_name(stop) %></h4>
       <% if Rails.env == "development" %>
-        <h3 style="color:blue"><%= stop['result']['transport_type'] %>
-        <h3 style="color:red"><%= stop['result']['stop_id'] %>
+        <h3 style="color:blue"><%= stop['result']['transport_type'] %></h3>
+        <h3 style="color:red"><%= stop['result']['stop_id'] %></h3>
       <% end %>
       <% Stop.uniq_tram_lines(stop).each do |line| %>
-        <%= button_tag Stop.info(line), class: 'btn btn-large btn-default', tramline: '1' %>
+        <%= button_tag Stop.info(line), class: 'tram-line btn btn-large btn-default' %>
+        <div class="last-five-trams">
+          <p>What time did you get off?</p>
+          <ul class="list-group">
+            <li>10 minutes ago</li>
+            <li>30 minutes ago</li>
+            <li>1 hour ago</li>
+            <li class="earlier"><a>Earlier tram...</a></li>
+          </ul>
+          </div>
       <% end %>
     </div>
   <% end %>
