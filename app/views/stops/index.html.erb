@@ -11,7 +11,7 @@
 <div class="transport">
  <% @tram_stops.each do |stop| %>
     <div class="tram-stop">
-      <h4><%= Stop.stop_name(stop) %></h4>
+      <h4><%= raw(Stop.stop_name(stop)) %></h4>
       <% if Rails.env == "development" %>
 <!--         <h3 style="color:blue"><%= stop['result']['transport_type'] %></h3>
         <h3 style="color:red"><%= stop['result']['stop_id'] %></h3> -->

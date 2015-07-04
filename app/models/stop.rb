@@ -32,7 +32,10 @@ class Stop < ActiveRecord::Base
   end
 
   def self.stop_name(data)
-    result(data)['location_name'].sub("#"," Stop ")
+    location_name = result(data)['location_name']
+    stop_no =  %q(<label class="label-info label pull-right">) + "Stop " + location_name.split('#').second + "</label>"
+    stop_name = location_name.split('#').first
+    stop_name + stop_no
   end
 
   def self.stop_id(data)
