@@ -1,3 +1,13 @@
+/*
+https://color.adobe.com/Red-Purple-Mustard-color-theme-6438222/
+
+$red : #A61B26;
+$purple : #030C40;
+$yellow : #F2C84B;
+$light-grey : #EAF5F5;
+$dark-grey : #99A1A7;
+*/
+
 // import the CSS framework
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -89,6 +99,18 @@ a, a:hover, a:focus {
   color: #11143F;
 }
 
+body.loading:before {
+  display: block;
+  height: 100%;
+  width: 100%;
+  content: "searching...";
+  background: rgba(166,27,38,0.85) asset_url("loading.svg") no-repeat center 20%;
+  position: absolute;
+  z-index: 100;
+  padding-top: 60%;
+  font-size: 2.5em;
+  color: rgba(255,255,255,0.85);
+}
 
 .lost {
   .jumbotron {
