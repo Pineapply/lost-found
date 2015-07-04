@@ -42,7 +42,7 @@ $(document).on("ready page:load", function() {
   });
 
   $(".tram-line").click(function() {
-    $(this).next().toggle();
+    $(this).next().show();
   });
 
   is_ptv_open();
