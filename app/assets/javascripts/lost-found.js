@@ -49,9 +49,9 @@ $(document).on('click',".get-location, .search-location button",function(){
 
 $(document).on('click', '.tram-line', function() {
     if ($(this).next().css('display') == 'none') {
-      $('.last-five-trams').hide();
+      $(this).next().hide();
     } else {
-      $('.last-five-trams').show();
+      $(this).next().show();
     }
 });
 
