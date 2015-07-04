@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :reported_items, -> { where(type: 'Reported') }, foreign_key:"user_id",
                                                             class_name: "Item"
   accepts_nested_attributes_for :missing_items
+  accepts_nested_attributes_for :reported_items
 
   def self.types
     %w(Owner Reporter)

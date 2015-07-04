@@ -20,10 +20,22 @@
   <%= f.text_field :name, placeholder: "Your Name", class:"form-control" %>
   <%= f.email_field :email, placeholder: "Your Email", class:"form-control" %>
 
-  <%= f.fields_for :missing_items do |item_field|  %>
-    <%= item_field.text_field :name, placeholder: "Brief description of the item", class:"form-control"  %>
-    <%= item_field.text_area :description, placeholder: "Detail description", class:"form-control"  %>
+  <% if @type == "Missing" %>
+
+    <%= f.fields_for :missing_items do |item_field|  %>
+      <%= item_field.text_field :name, placeholder: "Brief description of the item", class:"form-control"  %>
+      <%= item_field.text_area :description, placeholder: "Detail description", class:"form-control"  %>
+    <% end %>
+
+  <% else %>
+
+    <%= f.fields_for :reported_items do |item_field|  %>
+      <%= item_field.text_field :name, placeholder: "Brief description of the item", class:"form-control"  %>
+      <%= item_field.text_area :description, placeholder: "Detail description", class:"form-control"  %>
+    <% end %>
+
   <% end %>
+
 
   <p>Do you have a photo of the item?</p>
 

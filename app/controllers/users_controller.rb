@@ -7,7 +7,14 @@ class UsersController < ApplicationController
 
   def new
     @user = type_class.new
-    @user.missing_items.build
+
+    #TODO: refactor this
+    if type == 'Missing'
+      @user.missing_items.build
+    else
+      @user.reported_items.build
+    end
+
     render "new_#{type_class.to_s.downcase}".to_sym
   end
 
@@ -18,7 +25,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { render "thanks_#{type_class.to_s.downcase}".to_sym }
       else
-        format.html { render :new }
+        format.html { render "new_#{type_class.to_s.downcase}".to_sym }
       end
     end
   end
@@ -44,6 +51,8 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(type.underscore.to_sym).permit(:name, :email, :type,
-                                missing_items_attributes: [:name, :description] )
+                                missing_items_attributes: [:name, :description],
+                                reported_items_attributes: [:name, :description]
+                                )
   end
 end

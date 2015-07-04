@@ -21,10 +21,10 @@
         <div class="last-five-trams">
           <p><b>How long ago did you get off?</b></p>
           <ul class="list-group">
-            <li>10 minutes</li>
-            <li>30 minutes</li>
-            <li>1 hour</li>
-            <li class="earlier"><a href="/owners/new">I got off earlier...</a></li>
+            <li><%= link_to "10 minutes", reporteds_path %></li>
+            <li><%= link_to "30 minutes", reporteds_path %></li>
+            <li><%= link_to "1 hours", reporteds_path %></li>
+            <li class="earlier"><%= link_to "I got of earlier...", reporteds_path %></li>
           </ul>
           </div>
       <% end %>
