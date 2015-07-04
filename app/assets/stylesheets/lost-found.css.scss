@@ -130,7 +130,7 @@ body.loading:before {
 
 .lost {
   .jumbotron {
-    background: #A61E27 asset_url("tram-translucent-icon.png") no-repeat -15% top;
+    background: #A61E27 asset_url("tram-translucent-icon.png") no-repeat left top;
     background-size: contain;
     color: #FFF;
     height: 15em;
@@ -141,13 +141,6 @@ body.loading:before {
       font-size: 26px;
     }
   }
-  .location-search {
-    font-size: 1.25em;
-    padding: 2em 1.5em 8em;
-    margin-top: -1.75em;
-    background: #EAF6F5 asset_url("lost-decor.png") bottom right no-repeat;
-    background-size: contain;
-  }
   .form-control {
     border: 3px solid #D4EDF3;
   }
@@ -157,29 +150,53 @@ body.loading:before {
     letter-spacing: 1px;
     border-radius: 8px;
   }
-  .search-location input {
-    border: 3px solid #D4EDF3;
-  }
-  .search-location button {
-    border: 3px solid #D4EDF3;
-    padding: 4px 14px;
-    background-color: #D4EDF3;
-  }
 }
 
 
 .found {
   .jumbotron {
-    background: #F3C84B asset_url("tram-translucent-icon.png") no-repeat right top;
+    background: #F3C84B asset_url("tram-translucent-yellow.png") no-repeat right top;
     background-size: contain;
-    color: #FFF;
+    color: #11143F;
     height: 15em;
     align-items: flex-start;
     padding: 2em;
   }
+  .get-location button {
+    background-color: #A61B26;
+    color: #FFF;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  a.back-home {
+    color: #11143F;
+  }
 }
 
+/* The location search panel is common to both search and found*/
+.location-search {
+  font-size: 1.25em;
+  padding: 2em 1.5em 8em;
+  margin-top: -1.75em;
+  background: #EAF6F5 asset_url("lost-decor.png") bottom right no-repeat;
+  background-size: contain;
+}
+.search-location input {
+  border: 3px solid #D4EDF3;
+}
+.search-location button {
+  border: 3px solid #D4EDF3;
+  padding: 4px 14px;
+  background-color: #D4EDF3;
+}
+@media (min-width: 420px) {
+  .location-search {
+      background-size: 40%;
+      background-position: bottom left;
+  }
+}
 
+/* Select tram*/
 .tram-stop button {
   clear:both;
   display: block;
