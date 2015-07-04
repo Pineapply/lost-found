@@ -32,7 +32,7 @@ class Stop < ActiveRecord::Base
   end
 
   def self.stop_name(data)
-    result(data)['location_name'].sub("#"," - Stop ")
+    result(data)['location_name'].sub("#"," Stop ")
   end
 
   def self.stop_id(data)
