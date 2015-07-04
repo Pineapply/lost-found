@@ -30,22 +30,35 @@ function show_loading_screen(){
 
 // TODO: modularized tangled JS below
 // DO NOT do this in real project
-$(document).on("ready page:load", function() {
-  $(".get-location, .search-location button").click(function(){
-    show_loading_screen();
-    if ($(this).data("type") == "found") {
-      window.location.href = "/missings";
-    }
-    else {
-      getlocation();
-    }
-  });
-
-  $(".tram-line").click(function() {
-    console.log($(this));
-    $(this).next().show();
-  });
+$(document).on("ready page:change", function() {
 
   is_ptv_open();
 
 })
+
+$(document).on('click',".get-location, .search-location button",function(){
+  show_loading_screen();
+  if ($(this).data("type") == "found") {
+    window.location.href = "/missings";
+  }
+  else {
+    getlocation();
+  }
+});
+
+
+$(document).on('click', '.tram-line', function() {
+  $(this).next().toggle();
+});
+
+// $(".tram-line").click(function() {
+//   var el = $(this).next();
+//   console.log(el);
+//   if (el.is(":visible")) {
+//     console.log('here');
+//     el.hide();
+//   } else {
+//     console.log('bla');
+//     el.show();
+//   }
+// });
