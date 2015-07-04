@@ -1,4 +1,4 @@
-<%= form_for(@item) do |f| %>
+<% form_for(@item, html: {class: "form-lost-property"}) do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -11,19 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.number_field :status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= fields_for :user do |user_field|  %>
+    <%= user_field.text_field :name, placeholder: "Your Name", class:"form-control" %>
+    <%= user_field.email_field :email, placeholder: "Your Email", class:"form-control" %>
+  <% end %>
+  <%= f.text_field :name, placeholder: "Brief description of the item", class:"form-control"  %>
+  <%= f.text_area :description, placeholder: "Detail description", class:"form-control"  %>
+
+  <p>Do you have a photo of the item?</p>
+
+  <%= f.submit %>
+
 <% end %>
