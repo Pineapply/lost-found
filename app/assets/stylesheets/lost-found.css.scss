@@ -199,18 +199,6 @@ body.loading:before {
 
 /* Select tram*/
 .stops {
-  .jumbotron {
-    color: #FFF;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#030c40+0,a61b26+100 */
-    background: #030c40; /* Old browsers */
-    background: -moz-linear-gradient(45deg,  #030c40 0%, #a61b26 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#030c40), color-stop(100%,#a61b26)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* IE10+ */
-    background: linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030c40', endColorstr='#a61b26',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  }
   .refine-location input {
     border: 3px solid #D4EDF3;
   }
@@ -281,18 +269,6 @@ body.loading:before {
 
 /* Submit Lost Property Report */
 .users {
-  .jumbotron {
-    color: #FFF;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#030c40+0,a61b26+100 */
-    background: #030c40; /* Old browsers */
-    background: -moz-linear-gradient(45deg,  #030c40 0%, #a61b26 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#030c40), color-stop(100%,#a61b26)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* IE10+ */
-    background: linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030c40', endColorstr='#a61b26',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  }
   .form-lost-property {
     padding: 1.5em 2.5em 1em;
     background-color: #EAF5F5;
@@ -315,6 +291,20 @@ body.loading:before {
   h4 {
     padding: 0em 2.5em;
   }
+}
+
+/* RED - PURPLE JUMBOTRON GRADIENT BANNER */
+.stops .jumbotron, .users .jumbotron, .items .jumbotron {
+    color: #FFF;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#030c40+0,a61b26+100 */
+    background: #030c40; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #030c40 0%, #a61b26 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#030c40), color-stop(100%,#a61b26)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #030c40 0%,#a61b26 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030c40', endColorstr='#a61b26',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /* Footer */

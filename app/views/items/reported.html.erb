@@ -1,4 +1,7 @@
-<h1>Reported Items</h1>
+<div class="jumbotron">
+  <a href="/" class="back-home"><i class="glyphicon glyphicon-chevron-left"></i> HOME </a>
+  <h1>Recently Found</h1>
+</div>
 
 <% @items.each do |item| %>
   <div>
@@ -6,3 +9,5 @@
     <h4><%= item.description %></h4>
   </div>
 <% end %>
+
+Can't find your item?
