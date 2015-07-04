@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { render :thanks }
+        format.html { render "thanks_#{type_class.to_s.downcase}".to_sym }
       else
         format.html { render :new }
       end
