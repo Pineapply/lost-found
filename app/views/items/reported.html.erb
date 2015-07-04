@@ -1,1 +1,8 @@
-<h1>reported</h1>
+<h1>Reported Items</h1>
+
+<% @items.each do |item| %>
+  <div>
+    <h4><%= item.name %></h4>
+    <h4><%= item.description %></h4>
+  </div>
+<% end %>
