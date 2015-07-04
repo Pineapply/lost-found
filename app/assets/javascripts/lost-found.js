@@ -42,6 +42,7 @@ $(document).on("ready page:load", function() {
   });
 
   $(".tram-line").click(function() {
+    console.log($(this));
     $(this).next().show();
   });
 
