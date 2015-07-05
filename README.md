@@ -3,7 +3,7 @@ GovHack 2015 project
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ###"LOST FOUND" is a commuter web app for connecting commuter who has lost an item, the finder as well as government services provider. 
-While we envisioned the app as a platform-agnostic digital lost property service, alas, we only have 26 hours to hack it together! Nevertheless, this is only the first step, we hope to hear your comments and eventually release the service as a tool to connect fellow commuters. Stay tuned for more updates!
+While we envisioned the app as a platform-agnostic digital lost property service, alas, we only have 46 hours to hack it together! Nevertheless, this is only the first step, we hope to hear your comments and eventually release the service as a tool to connect fellow commuters. Stay tuned for more updates!
 
 #####More than 15,000 items were lost on Victorian Public Transport system last year.
 
