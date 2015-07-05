@@ -1,12 +1,13 @@
-# Lost+Found
-GovHack 2015 project
+# Lost+Found (Melbourne GovHack Jul 2015)
+
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Lost+Found](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/promo.png)]
 
 ## Resources
 
 Creative assets, Illustrator file, Videos
 
-[![Video](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/promo.png)](https://www.youtube.com/watch?v=ocPlQZv5BKg&)
+[![Video](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/video.png)](https://www.youtube.com/watch?v=ocPlQZv5BKg&)
 
 [Illustration, branding, video editing assets](https://drive.google.com/folderview?id=0B8cQ5n26aTpffjVBZXl0QS1FTlo2Qm5UQ1FJRVZKQTdrNW9vbWttUFVzbTM4NmNUcnpjMDg&usp=sharing)
 
