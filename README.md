@@ -1,7 +1,7 @@
 # Lost+Found (Melbourne GovHack Jul 2015)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-[![Lost+Found](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/promo.png)](https://github.com/Boo-Hiss/lost-found)
+[![Lost+Found](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/promo.png)](http://boo-hiss.github.io/website/)
 
 ## Resources
 
