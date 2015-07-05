@@ -15,7 +15,14 @@ class Item < ActiveRecord::Base
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
+  before_save :default_values
+
+
   def self.types
     %w(Missing Reported)
+  end
+
+  def default_values
+    self.thumbnail ||= 'https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/floral-wallet-red.jpeg'
   end
 end
