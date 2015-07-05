@@ -40,6 +40,15 @@
   transition: all 0.5s ease-in;
 }
 
+.item {
+  transition: all 0.5s ease-in;
+}
+
+.item.fade {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
 .update-owner-message .submit {
 	width: 100px !important;
 	margin-top: 0.5em;
@@ -53,9 +62,11 @@ $(".update-the-owner").click(function() {
 });
 
 $(".submit").click(function() {
-	$(this).parent().prev().removeClass("update-the-owner").addClass("disabled");
+	$(this).parent().prev().removeClass("update-the-owner");
 	$(this).parent().prev().text("Item status updated ✓");
 	$(this).parent().removeClass("shown");
+	$(this).closest(".item").slideUp(1000).fadeOut(1000);
+	// $(this).closest(".item").addClass("fade").delay(800).css("display","none");
 });
 
 </script>
