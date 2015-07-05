@@ -2,12 +2,12 @@
 GovHack 2015 project
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## Resouces
+## Resources
 
 Creative assets, Illustrator file, Videos
 
 -[![Video](https://https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/startup.png)](https://www.youtube.com/watch?v=ocPlQZv5BKg&)
--[!Illustrator files][https://drive.google.com/folderview?id=0B8cQ5n26aTpffjVBZXl0QS1FTlo2Qm5UQ1FJRVZKQTdrNW9vbWttUFVzbTM4NmNUcnpjMDg&usp=sharing]
+-[!Illustrator files](https://drive.google.com/folderview?id=0B8cQ5n26aTpffjVBZXl0QS1FTlo2Qm5UQ1FJRVZKQTdrNW9vbWttUFVzbTM4NmNUcnpjMDg&usp=sharing)
 
 
 ## Description
