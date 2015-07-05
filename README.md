@@ -2,6 +2,16 @@
 GovHack 2015 project
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+## Resouces
+
+Creative assets, Illustrator file, Videos
+
+-[![Video](https://https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/startup.png)](https://www.youtube.com/watch?v=ocPlQZv5BKg&)
+-[!Illustrator files][https://drive.google.com/folderview?id=0B8cQ5n26aTpffjVBZXl0QS1FTlo2Qm5UQ1FJRVZKQTdrNW9vbWttUFVzbTM4NmNUcnpjMDg&usp=sharing]
+
+
+## Description
+
 ###"LOST FOUND" is a commuter web app for connecting commuter who has lost an item, the finder as well as government services provider. 
 While we envisioned the app as a platform-agnostic digital lost property service, alas, we only have 46 hours to hack it together! Nevertheless, this is only the first step, we hope to hear your comments and eventually release the service as a tool to connect fellow commuters. Stay tuned for more updates!
 
