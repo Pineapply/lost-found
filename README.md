@@ -6,8 +6,9 @@ GovHack 2015 project
 
 Creative assets, Illustrator file, Videos
 
-* [![Video](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/promo.png)](https://www.youtube.com/watch?v=ocPlQZv5BKg&)
-* [Illustration, branding, video editing assets](https://drive.google.com/folderview?id=0B8cQ5n26aTpffjVBZXl0QS1FTlo2Qm5UQ1FJRVZKQTdrNW9vbWttUFVzbTM4NmNUcnpjMDg&usp=sharing)
+[![Video](https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/promo.png)](https://www.youtube.com/watch?v=ocPlQZv5BKg&)
+
+[Illustration, branding, video editing assets](https://drive.google.com/folderview?id=0B8cQ5n26aTpffjVBZXl0QS1FTlo2Qm5UQ1FJRVZKQTdrNW9vbWttUFVzbTM4NmNUcnpjMDg&usp=sharing)
 
 
 ## Description
