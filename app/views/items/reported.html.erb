@@ -8,7 +8,7 @@
   <div class="item">
     <h4><%= item.name %></h4>
     <p><%= item.description %></p>
-    <img src="http://lorempixel.com/100/100/technics/" alt="Photo" />
+    <%= image_tag item.picture.url(:thumb) %>
   </div>
 <% end %>
 </div>

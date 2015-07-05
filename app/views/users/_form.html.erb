@@ -1,9 +1,5 @@
 <%= form_for(@user, html: {class: "form-lost-property"}) do |f| %>
 
-  <p>
-    If an item is located and handed to PTV and/or Victoria Police and matches your report, you will be contacted via the details you have provided.
-  </p>
-
   <% if @user.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@user.errors.count, "error") %>
@@ -20,11 +16,13 @@
   <%= f.text_field :name, placeholder: "Your Name", class:"form-control" %>
   <%= f.email_field :email, placeholder: "Your Email", class:"form-control" %>
 
-  <% if @type == "Missing" %>
+  <% if @type == "Owner" %>
 
     <%= f.fields_for :missing_items do |item_field|  %>
       <%= item_field.text_field :name, placeholder: "Brief description of the item", class:"form-control"  %>
       <%= item_field.text_area :description, placeholder: "Detail description", class:"form-control"  %>
+      <p>Do you have a photo of the item?</p>
+      <%= item_field.file_field :picture %>
     <% end %>
 
   <% else %>
@@ -32,14 +30,11 @@
     <%= f.fields_for :reported_items do |item_field|  %>
       <%= item_field.text_field :name, placeholder: "Brief description of the item", class:"form-control"  %>
       <%= item_field.text_area :description, placeholder: "Detail description", class:"form-control"  %>
+      <p>Do you have a photo of the item?</p>
+      <%= item_field.file_field :picture %>
     <% end %>
 
   <% end %>
-
-
-  <p>Do you have a photo of the item?</p>
-
-  <%= f.file_field :picture %>
 
   <%= f.submit 'Report missing item', class: "btn btn-default"  %>
 

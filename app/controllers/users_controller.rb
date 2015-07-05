@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = type_class.new
 
     #TODO: refactor this
-    if type == 'Missing'
+    if type == 'Owner'
       @user.missing_items.build
     else
       @user.reported_items.build
@@ -51,8 +51,8 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(type.underscore.to_sym).permit(:name, :email, :type,
-                                missing_items_attributes: [:name, :description],
-                                reported_items_attributes: [:name, :description]
+                                missing_items_attributes: [:name, :description, :picture],
+                                reported_items_attributes: [:name, :description, :picture]
                                 )
   end
 end
