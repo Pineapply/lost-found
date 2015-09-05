@@ -43,10 +43,8 @@ Rails.application.configure do
       :bucket => 'lostfound',
       :s3_host_name => 's2-ap-southeast-2.amazonaws.com',
       # :bucket => ENV['S3_BUCKET_NAME'],
-      :access_key_id => 'AKIAJ7L5TV6OO6VQWLWQ',
-      # :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => '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'
-      # :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-} # config.action_view.raise_on_missing_translations = true
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      }
+    } # config.action_view.raise_on_missing_translations = true
 end

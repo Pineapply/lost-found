@@ -82,6 +82,7 @@ GEM
     execjs (2.5.2)
     figaro (1.1.1)
       thor (~> 0.14)
+    geocoder (1.2.9)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     high_voltage (2.3.0)
@@ -208,6 +209,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   figaro
+  geocoder
   high_voltage
   jbuilder (~> 2.0)
   jquery-rails

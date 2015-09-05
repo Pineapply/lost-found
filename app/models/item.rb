@@ -17,12 +17,11 @@ class Item < ActiveRecord::Base
 
   # before_save :default_values
 
-
   def self.types
     %w(Missing Reported)
   end
 
-  def default_values
+  # def default_values
     # self.thumbnail ||= 'https://raw.githubusercontent.com/Boo-Hiss/lost-found/master/app/assets/images/floral-wallet-red.jpeg'
-  end
+  # end
 end

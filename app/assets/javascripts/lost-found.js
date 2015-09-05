@@ -16,6 +16,7 @@ function getlocation() {
 
 function is_ptv_open(){
   var current_time = new Date().getHours();
+
   if(current_time <= 24 && current_time >= 6){
     $(".is_ptv_open").html("<span class='label label-success'>PTV is open now</label>");
   }
@@ -30,39 +31,37 @@ function show_loading_screen(){
 
 // TODO: modularized tangled JS below
 // DO NOT do this in real project
-$(document).on("ready page:change", function() {
+$(document).on("ready page:load", function() {
 
   is_ptv_open();
 
-})
-
-$(document).on('click',".get-location, .search-location button",function(){
-  show_loading_screen();
-  if ($(this).data("type") == "found") {
-    window.location.href = "/missings";
-  }
-  else {
-    getlocation();
-  }
-});
-
-
-$(document).on('click', '.tram-line', function() {
-    if ($(this).next().css('display') == 'none') {
-      $(this).next().show();
-    } else {
-      $(this).next().hide();
+  $(document).on('click',".get-location", function(){
+    show_loading_screen();
+    if ($(this).data("type") == "found") {
+      window.location.href = "/missings";
     }
-});
+    else {
+      getlocation();
+    }
+  });
 
-// $(".tram-line").click(function() {
-//   var el = $(this).next();
-//   console.log(el);
-//   if (el.is(":visible")) {
-//     console.log('here');
-//     el.hide();
-//   } else {
-//     console.log('bla');
-//     el.show();
-//   }
-// });
+  $(document).on('click','.location-btn', function(){
+    if ($(this).data("type") == "found") {
+      window.location.href = "/missings";
+    } else {
+      window.location.href = "/stops?address=" + $('.location-address').val(); 
+    }
+  });
+
+  $(document).on('click', '.tram-line', function() {
+      // console.log('click');
+      if ($(this).next().css('display') == 'none') {
+        // console.log('none');
+        $(this).next().show();
+      } else {
+        // console.log('hide');
+        $(this).next().hide();
+      }
+  });
+  
+})

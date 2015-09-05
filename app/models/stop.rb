@@ -5,21 +5,33 @@ class Stop < ActiveRecord::Base
   ALL = 0
   PAGINATE = 3
 
+  def self.tram_stops_by_lat_lng(lat, lng)
+    all_stops_by_lat_lng(lat, lng).select { |k,v| k['result']['transport_type'] == 'tram'}.take(PAGINATE)
+  end
+
+  def self.tram_stops_by_addr(addr)
+    all_stops_by_addr(addr).select { |k,v| k['result']['transport_type'] == 'tram'}.take(PAGINATE)
+  end
+
+  private
+
   def self.api
     # TODO: Move api key to ENV specific file
-    PtvTimetable::API.new('1000491', '6958c2fa-05c9-11e5-9cc2-02f9e320053a')
+    @api ||= PtvTimetable::API.new('1000491', '6958c2fa-05c9-11e5-9cc2-02f9e320053a')
   end
 
   def self.all_tram_lines(stop_id)
     api.broad_next_departures(Stop::TRAM, stop_id, Stop::ALL)
   end
 
-  def self.all_stops(lat, lng)
-    api.near_me(lat,lng)
+  def self.all_stops_by_lat_lng(lat, lng)
+    lat1, lng1 = Geocoder.coordinates("100 Swanston street, Melbourne")
+    api.near_me(lat1,lng1)
   end
 
-  def self.tram_stops(lat, lng)
-    all_stops(lat, lng).select { |k,v| k['result']['transport_type'] == 'tram'}.take(PAGINATE)
+  def self.all_stops_by_addr(address)
+    lat1, lng1 = Geocoder.coordinates(address)
+    api.near_me(lat1,lng1)
   end
 
   def self.uniq_tram_lines(data)

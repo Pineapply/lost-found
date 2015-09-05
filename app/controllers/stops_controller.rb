@@ -4,7 +4,11 @@ class StopsController < ApplicationController
   # GET /stops
   # GET /stops.json
   def index
-    @tram_stops = Stop.tram_stops(params[:lat], params[:lng])
+    if params[:address].present?
+      @tram_stops = Stop.tram_stops_by_addr(params[:address])
+    else
+      @tram_stops = Stop.tram_stops_by_lat_lng(params[:lat], params[:lng])
+    end
   end
 
   # GET /stops/1
