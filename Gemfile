@@ -24,7 +24,8 @@ gem 'puma'
 gem 'ptv_timetable', github: "alotofnoodles/ptv_timetable"
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '< 2.0'
-gem "figaro"
+gem 'figaro'
+gem 'geocoder'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
